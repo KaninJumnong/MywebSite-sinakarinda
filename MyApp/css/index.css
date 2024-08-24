@@ -1,0 +1,296 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* เริ่มต้น CSS สำหรับแถบนำทาง */
+.navbar {
+    height: 60px;
+    background-color: #fff; /* สีพื้นหลังของแถบ */
+    padding: 40px 10px; /* ระยะห่างจากขอบของแถบ */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000; /* สีข้อความ */
+}
+
+.navbar .nav-links {
+    list-style: none; /* ลบจุดในรายการ */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links li {
+    margin-right: 20px; /* ระยะห่างระหว่างรายการ */
+}
+
+.navbar .nav-links a {
+    color: #000; /* สีลิงก์ */
+    text-decoration: none; /* ลบขีดเส้นใต้ */
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links a img {
+    width: 24px; /* ขนาดของไอคอน */
+    height: auto;
+    margin-right: 8px; /* ระยะห่างระหว่างไอคอนและข้อความ */
+}
+
+.navbar .login {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .login a {
+    color: #000; /* สีของลิงก์ */
+    text-decoration: none; /* ลบขีดเส้นใต้ */
+    margin-left: 15px; /* ระยะห่างระหว่างลิงก์ */
+    font-size: 16px;
+}
+
+.navbar .login span {
+    color: #000;
+    margin-right: 15px; /* ระยะห่างระหว่างข้อความต้อนรับและลิงก์ออกจากระบบ */
+    font-size: 16px;
+}
+
+/* เพิ่มความสวยงามให้กับลิงก์เมื่อวางเมาส์อยู่เหนือ */
+.navbar a:hover {
+    color: #ff9900; /* เปลี่ยนสีลิงก์เมื่อวางเมาส์อยู่เหนือ */
+}
+
+/* เพิ่มความสวยงามให้กับข้อความต้อนรับ */
+.navbar .login span {
+    font-weight: bold;
+}
+/* Content styles */
+.content {
+    padding: 80px 20px 20px; /* Space for fixed navbar */
+    background-color: #ffe7cb;
+}
+
+/* Main content layout */
+.main-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Main image */
+.img {
+    flex: 1;
+}
+
+.img img {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    height: auto;
+    border-radius: 10px;
+}
+
+.guitar {
+    width: 200px;
+    margin-left: 500px; /* ขยับไปทางขวา 20px */
+    margin-top: -300px; /* ขยับขึ้นด้านบน 10px (ใช้ค่าลบ) */
+}
+
+.piano {
+    width: 200px;
+    margin-left: 830px; /* ขยับไปทางขวา 20px */
+    margin-top:-230px;
+}
+
+.drum {
+    width: 200px;
+    margin-left: 1150px; /* ขยับไปทางขวา 20px */
+    margin-top: -225px;
+}
+
+.content-lorem {
+    display: flex;
+    background-color: #fff0df;
+    padding: 90px;
+    margin-top: 100px;
+}
+
+.content-lorem p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+}
+
+.content-lorem a {
+    display: flex;
+    color: #000;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 200px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 20px;
+    height: 10px;
+    background-color: #fff;
+}
+
+.content-lorem a:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+/* General styles for the aucts section */
+.products {
+    padding: 50px;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.products h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Grid container for the products */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusts column count based on available width */
+    gap: 15px; /* Space between grid items */
+    justify-items: center; /* Center items horizontally in each grid cell */
+}
+
+/* Individual grid item styles */
+.grid-item {
+    background-color: #fff; /* Background color of each grid item */
+    height: 250px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a card-like appearance */
+    overflow: hidden; /* Ensure images do not overflow their container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Ensure the entire grid item is clickable */
+.product-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Style the image */
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below images */
+}
+
+/* Style the "Buy Now" button */
+.buy-now {
+    margin-top: 10px; /* Space between image and button */
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff; /* Bootstrap primary color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buy-now a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.buy-now:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Scale up the grid item on hover */
+.grid-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the item on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-info, .footer-links, .footer-social {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-info h3, .footer-links h3, .footer-social h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ddd;
+}
+
+.footer-social {
+    display: block;
+    gap: 10px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+}

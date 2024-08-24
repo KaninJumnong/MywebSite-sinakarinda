@@ -1,0 +1,250 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd; /* เพิ่มเส้นขอบด้านล่างเพื่อให้ดูชัดเจน */
+}
+
+.navbar img {
+    width: 30px;
+    height: auto;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links li {
+    margin: 0 10px;
+}
+
+.navbar .nav-links a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #575757;
+    color: #fff;
+}
+
+.navbar .login {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .login a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    border: 1px solid #000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .login a:hover {
+    background-color: #575757;
+    color: #fff;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    padding: 40px;
+    margin-top: 60px; /* ให้เนื้อหาไม่ชนกับ navbar */
+}
+
+.sidebar {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-right: 2px solid #ccc;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.guitar-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.guitar-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.guitar-item h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.guitar-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+.buy-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+}
+
+.login-prompt {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.login-prompt h2 {
+    margin: 0 0 10px;
+}
+
+.login-prompt button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-prompt button:hover {
+    background-color: #0056b3;
+}
+
+/* Search form styles */
+.search-form {
+    display: flex;
+    justify-content: center; /* กึ่งกลางสำหรับการออกแบบที่เรียบง่าย */
+    margin: 20px 0;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    width: 300px; /* ปรับความกว้างตามต้องการ */
+    box-sizing: border-box;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    border: 1px solid #007bff;
+    border-left: none; /* ลบขอบด้านซ้ายเพื่อการรวมกันที่ดี */
+    border-radius: 0 5px 5px 0;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: 1fr 2fr;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    .sidebar {
+        border-right: none;
+        border-bottom: 2px solid #ccc;
+    }
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .navbar .nav-links {
+        flex-direction: column;
+    }
+    .navbar .nav-links li {
+        margin: 5px 0;
+    }
+}

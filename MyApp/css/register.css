@@ -1,0 +1,78 @@
+/* ทั่วไป */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff0df; /* สีพื้นหลังของหน้า */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ฟอร์มการลงทะเบียน */
+form {
+    background-color: #ffe7cb; /* สีพื้นหลังของฟอร์ม */
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 40px auto; /* กึ่งกลางหน้า */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงา */
+}
+
+/* Label */
+form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333; /* สีตัวอักษรของ label */
+}
+
+/* Input fields */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd; /* กรอบของ input */
+    border-radius: 5px; /* มุมโค้ง */
+    box-sizing: border-box;
+}
+
+/* Submit button */
+form input[type="submit"] {
+    background-color: #fff; /* สีพื้นหลังของปุ่ม */
+    color: #000;
+    border: 1px solid #ffb6b6;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #ff9f9f; /* สีพื้นหลังของปุ่มเมื่อ hover */
+}
+
+/* Paragraphs */
+form p {
+    color: #000;
+    font-size: 14px;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+        max-width: 100%;
+        margin: 20px;
+    }
+
+    form label {
+        font-size: 14px;
+    }
+
+    form input[type="submit"] {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
